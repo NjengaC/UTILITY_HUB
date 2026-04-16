@@ -24,7 +24,17 @@ A smart everyday toolkit mobile app built with Flutter — providing essential u
 - Visual BMI scale indicator
 - Health interpretation feedback
 
-### 4. Tip Calculator
+### 4. Task / Checklist Manager
+- Create, edit, and delete tasks
+- Mark tasks as completed with checkbox toggle
+- Filter tasks: All, Active, Done
+- Search tasks by title or description
+- Progress bar showing completion percentage
+- Swipe-to-delete with confirmation dialog
+- Persistent offline storage with Hive
+- Sorted: incomplete first, then by last updated
+
+### 5. Tip Calculator
 - Bill amount input
 - Adjustable tip percentage with slider and quick-select chips
 - Split bill between multiple people
@@ -69,6 +79,16 @@ lib/
         notes_provider.dart     # Riverpod state management
         notes_screen.dart
         note_editor_screen.dart
+
+    tasks/
+      data/
+        tasks_repository.dart   # Hive persistence layer
+      domain/
+        task_model.dart         # Task data model
+      presentation/
+        tasks_provider.dart     # Riverpod state management
+        tasks_screen.dart
+        task_editor_screen.dart
 
     bmi/
       domain/

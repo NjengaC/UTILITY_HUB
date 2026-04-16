@@ -7,6 +7,8 @@ import 'package:utility_hub/features/notes/presentation/notes_screen.dart';
 import 'package:utility_hub/features/notes/presentation/note_editor_screen.dart';
 import 'package:utility_hub/features/bmi/presentation/bmi_screen.dart';
 import 'package:utility_hub/features/tip_calculator/presentation/tip_calculator_screen.dart';
+import 'package:utility_hub/features/tasks/presentation/tasks_screen.dart';
+import 'package:utility_hub/features/tasks/presentation/task_editor_screen.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
   return GoRouter(
@@ -49,6 +51,19 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/tip',
         name: 'tip',
         builder: (context, state) => const TipCalculatorScreen(),
+      ),
+      GoRoute(
+        path: '/tasks',
+        name: 'tasks',
+        builder: (context, state) => const TasksScreen(),
+      ),
+      GoRoute(
+        path: '/tasks/editor',
+        name: 'task-editor',
+        builder: (context, state) {
+          final taskId = state.uri.queryParameters['id'];
+          return TaskEditorScreen(taskId: taskId);
+        },
       ),
     ],
   );

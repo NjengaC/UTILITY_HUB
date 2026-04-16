@@ -99,6 +99,13 @@ class HomeScreen extends ConsumerWidget {
                     color: const Color(0xFF7B5800),
                     onTap: () => context.push('/tip'),
                   ),
+                  _ToolCard(
+                    icon: Icons.checklist_rounded,
+                    label: 'Tasks',
+                    description: 'Create & track your to-dos',
+                    color: const Color(0xFF386A20),
+                    onTap: () => context.push('/tasks'),
+                  ),
                 ],
               ),
             ),
