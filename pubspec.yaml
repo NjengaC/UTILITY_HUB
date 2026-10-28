@@ -1,5 +1,5 @@
 name: utility_hub
-description: "A new Flutter project."
+description: "A Flutter application provides a collection of useful tools and utilities for users."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
